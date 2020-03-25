@@ -1,0 +1,14 @@
+/Users/regianemaioli/web/bin/Debug/netcoreapp2.1/web.deps.json
+/Users/regianemaioli/web/bin/Debug/netcoreapp2.1/web.runtimeconfig.json
+/Users/regianemaioli/web/bin/Debug/netcoreapp2.1/web.runtimeconfig.dev.json
+/Users/regianemaioli/web/bin/Debug/netcoreapp2.1/web.dll
+/Users/regianemaioli/web/bin/Debug/netcoreapp2.1/web.pdb
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.csprojAssemblyReference.cache
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.csproj.CoreCompileInputs.cache
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.RazorAssemblyInfo.cache
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.RazorAssemblyInfo.cs
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.AssemblyInfoInputs.cache
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.AssemblyInfo.cs
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.RazorTargetAssemblyInfo.cache
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.dll
+/Users/regianemaioli/web/obj/Debug/netcoreapp2.1/web.pdb
