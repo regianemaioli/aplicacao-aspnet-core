@@ -25,17 +25,12 @@ namespace web
                 app.UseDeveloperExceptionPage();
             }
 
-            var livros = new List<Livro>();
-            livros.Add(new Livro("001", "Quem mexeu na minha query?", 12.99m));
-            livros.Add(new Livro("002", "Fique rico com C#", 30.99m));
-            livros.Add(new Livro("003", "Java para baixinhos", 25.99m));
+            Catalogo catalogo = new Catalogo();
+            Relatorio relatorio = new Relatorio(catalogo);
 
             app.Run(async (context) =>
             {
-                foreach(var livro in livros)
-                {
-                    await context.Response.WriteAsync($"{livro.Codigo,-10}{livro.Nome,-40}{livro.Preco.ToString("C"),10}\r\n");
-                }
+                await relatorio.Imprimir(context);
                
             });
         }
