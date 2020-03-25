@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{440348CB-DEDE-49C9-A052-EA9618F9D801}|Default">
   <MonoDevelop.Ide.ItemProperties.web PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Livro.cs">
     <Files>
       <File FileName="Program.cs" Line="22" Column="36" />
-      <File FileName="Startup.cs" Line="44" Column="1" />
-      <File FileName="Livro.cs" Line="1" Column="1" />
-      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="11" Column="2" />
+      <File FileName="Livro.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="web" expanded="True">
             <Node name="web" expanded="True">
-              <Node name="Properties" expanded="True">
-                <Node name="launchSettings.json" selected="True" />
-              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Livro.cs" selected="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

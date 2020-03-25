@@ -34,7 +34,7 @@ namespace web
             {
                 foreach(var livro in livros)
                 {
-                    await context.Response.WriteAsync($"{livro.Codigo,-10}{livro.Nome,-40}{livro.Preco,10}\r\n");
+                    await context.Response.WriteAsync($"{livro.Codigo,-10}{livro.Nome,-40}{livro.Preco.ToString("C"),10}\r\n");
                 }
                
             });
