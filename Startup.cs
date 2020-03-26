@@ -15,27 +15,32 @@ namespace web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddTransient<ICatalogo, Catalogo>();
+            //services.AddTransient<IRelatorio, Relatorio>();
+
+            //services.AddScoped<ICatalogo, Catalogo>();
+            //services.AddScoped<IRelatorio, Relatorio>();
+
+            var catalogo = new Catalogo();
+            services.AddSingleton<ICatalogo>(catalogo);
+            services.AddSingleton<IRelatorio>(new Relatorio(catalogo));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            var livros = new List<Livro>();
-            livros.Add(new Livro("001", "Quem mexeu na minha query?", 12.99m));
-            livros.Add(new Livro("002", "Fique rico com C#", 30.99m));
-            livros.Add(new Livro("003", "Java para baixinhos", 25.99m));
+            ICatalogo catalogo = serviceProvider.GetService<ICatalogo>();
+            IRelatorio relatorio = serviceProvider.GetService<IRelatorio>();
+
 
             app.Run(async (context) =>
             {
-                foreach(var livro in livros)
-                {
-                    await context.Response.WriteAsync($"{livro.Codigo,-10}{livro.Nome,-40}{livro.Preco.ToString("C"),10}\r\n");
-                }
+                await relatorio.Imprimir(context);
                
             });
         }
